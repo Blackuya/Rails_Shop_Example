@@ -1,0 +1,46 @@
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+}
+</style>
+</style>
+<h4 style="text-align: center;"><%= "Hello, #{@user.first_name}!" %></h4>
+<h2>Last Order:</h2>
+<table>
+  <table style="width:100%; text-align: center;">
+  <tr style="background-color: #2196F3">
+    <th>Product</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>
+  <% @user.orders.last.order_products.each do |p| %>
+  <tr>
+    <td><%= p.product.name %></td>
+    <td><%= "$#{p.product.price}" %></td>
+    <td><%= p.quantity %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td colspan="3">Total: <%= @user.orders.last.total %></td>
+  </tr>
+</table>
+
+<h2>Latest Products:</h2>
+<div class="grid-container">
+  <% @products.each do |p| %>
+  <div>
+    <%= render partial: "/templates/product_view", locals: {product: p} %>
+  </div>
+  <% end %>
+</div>
