@@ -1,29 +1,3 @@
-<<<<<<< HEAD
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# Rails_Shop_Example
 A sample showing concepts of creating relationships between models for a shopping website
->>>>>>> 8f11f34e6b25d2f54c868af2eb4e9fd38bd8c5d5
