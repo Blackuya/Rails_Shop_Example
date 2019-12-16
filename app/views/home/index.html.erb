@@ -15,9 +15,10 @@
 }
 </style>
 </style>
-<h4 style="text-align: center;"><%= "Hello, #{@user.first_name}!" %></h4>
+<%= react_component("HelloWorld", { greeting: "Hello, #{@user.first_name}!" }) %>
+<%= react_component("ShoppingList", {order: session[:cart]}) %>
+
 <h2>Last Order:</h2>
-<table>
   <table style="width:100%; text-align: center;">
   <tr style="background-color: #2196F3">
     <th>Product</th>
