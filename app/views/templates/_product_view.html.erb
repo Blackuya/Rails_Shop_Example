@@ -3,5 +3,5 @@
 <p><%= product.description %></p>
 <div>
   <p><%= "Only $#{product.price}!" %></p>
-  <button class="product-btn" >Add to cart</button>
+  <button class="product-btn" data-val="<%=product.short(product.id).to_json%>">Add to cart</button>
 </div>

@@ -12,7 +12,7 @@ class ShoppingList extends React.Component {
 constructor(props){
   super(props);
   this.state = {
-    order: null
+    //order: null
   }
 
 }
@@ -21,6 +21,7 @@ constructor(props){
 /*
 
 */
+
 
  total(products){
   if(typeof products === 'undefined'){
@@ -50,6 +51,7 @@ constructor(props){
       this.setState({ state: this.state });
       console.log(this.props.order);
     };
+
     const content = ((typeof this.props.order.products !== 'undefined')?
     <table>
     <tbody>
@@ -76,7 +78,7 @@ constructor(props){
       if(btn.classList.contains("click-e")) return;
       btn.classList.add('click-e');
       btn.addEventListener("click", event => {
-        addProduct({"name": "Test", "price": "3.99", "quantity":"1"});
+        addProduct(JSON.parse(btn.getAttribute("data-val")));
       });
     });
 
