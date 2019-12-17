@@ -16,7 +16,7 @@
 </style>
 </style>
 <%= react_component("HelloWorld", { greeting: "Hello, #{@user.first_name}!" }) %>
-<%= react_component("ShoppingList", {order: session[:cart]}) %>
+<%= react_component("ShoppingList", {products: session[:cart]["products"]}) %>
 
 <h2>Last Order:</h2>
   <table style="width:100%; text-align: center;">
